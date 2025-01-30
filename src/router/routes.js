@@ -3,7 +3,9 @@ const routes = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/IndexPage.vue') }
+      { path: '', component: () => import('src/pages/PublishPost.vue') },
+      { path: 'createPost', component: () => import('src/pages/CreatePost.vue') },
+      { path: 'postPlanner', component: () => import('src/pages/PostPlanner.vue') },
     ]
   },
 
