@@ -25,6 +25,18 @@ export default defineRouter(function (/* { store, ssrContext } */) {
     // quasar.conf.js -> build -> publicPath
     history: createHistory(process.env.VUE_ROUTER_BASE)
   })
+  Router.beforeEach((to, from, next) => {
+    const isAuthenticated = !!localStorage.getItem('user') // Check if user exists
+    console.log('Navigating away from:', from.path)
+  
+    if (to.path === '/login' && isAuthenticated) {
+      next('/') // Redirect logged-in users to home if they visit login page
+    } else if (to.meta.requiresAuth && !isAuthenticated) {
+      next('/login') // Redirect to login if trying to access a protected page
+    } else {
+      next() // Allow navigation
+    }
+  })
 
   return Router
 })

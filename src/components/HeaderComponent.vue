@@ -69,10 +69,12 @@
                     />
                 </q-avatar>
                 <q-avatar>
-                    <q-img 
+                    <div @click="logout">
+                        <q-img 
                         src="../assets/profile/Profile.jpg"
-                        style="height: 40px; width: 40px;"
-                    />
+                            style="height: 40px; width: 40px;"
+                        />
+                    </div>
                 </q-avatar>
             </q-toolbar>
         </q-header>
@@ -81,10 +83,17 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter()
 const select = ref(null)
 const selectOptions = ref([
     'Online',
     'Offline'
 ])
+
+const logout = () => {
+    localStorage.removeItem('user')
+    router.push('/login')
+}
 </script>

@@ -43,5 +43,10 @@ const linksList = [{
         icon: 'edit_calendar',
         link: '/postPlanner'
     },
+    {
+        title: 'Image',
+        icon: 'edit_calendar',
+        link: '/image'
+    },
 ]
 </script>
