@@ -1,13 +1,12 @@
 <template>
     <div class="q-pa-md">
         <q-header 
-            class="bg-white shadow-1"
-            style="height: 70px;"
+            class="bg-white shadow-1 tw-h-[70px]"
         >
             <q-toolbar>
                 <q-avatar 
                     square
-                    style="width: 100px; height: 70px;"
+                    class="tw-w-[100px] tw-h-[70px]"
                 >
                     <q-img src="../assets/logo/Logo.png" />
                 </q-avatar>
@@ -18,7 +17,7 @@
                     outlined
                     dense 
                     label="Enter mobile number"
-                    style="width: 400px; margin-right: 16px;"
+                    class="tw-w-full md:tw-w-[400px] tw-mr-[16px]"
                 >
                     <template v-slot:append>
                         <q-icon name="search" />
@@ -27,17 +26,17 @@
                 <q-select 
                     outlined
                     dense
-                    style="width: 180px;"
+                    class="tw-w-[150px] md:tw-w-[180px]"
                     v-model="select" 
                     :options="selectOptions" 
                     label="Active Status" 
+                    dropdown-icon="keyboard_arrow_down"
                 />
                 <q-avatar>
                     <q-icon 
                         name="signal_cellular_alt"
                         square
-                        color="red"
-                        style="height: 53px;"
+                        class="tw-h-[53px] text-red"
                         size="28px"
                     />
                 </q-avatar>
@@ -45,8 +44,7 @@
                     <q-icon 
                         name="group"
                         square
-                        color="blue"
-                        style="height: 53px;"
+                        class="tw-h-[53px] tw-text-blue-900"
                         size="28px"
                     />
                 </q-avatar>
@@ -54,8 +52,7 @@
                     <q-icon 
                         name="crop_square"
                         square
-                        class="text-blue"
-                        style="height: 53px;"
+                        class="tw-h-[53px] tw-text-blue-900"
                         size="28px"
                     />
                 </q-avatar>
@@ -63,16 +60,15 @@
                     <q-icon 
                         name="notifications"
                         square
-                        class="text-blue"
-                        style="height: 53px;"
+                        class="tw-h-[53px] tw-text-blue-900"
                         size="28px"
                     />
                 </q-avatar>
                 <q-avatar>
                     <div @click="logout">
                         <q-img 
-                        src="../assets/profile/Profile.jpg"
-                            style="height: 40px; width: 40px;"
+                            src="../assets/profile/Profile.jpg"
+                            class="tw-h-[40px] tw-w-[40px]" 
                         />
                     </div>
                 </q-avatar>

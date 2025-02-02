@@ -1,14 +1,14 @@
 <template>
-  <div class="row">
-    <div class="col">
+  <div>
+    <div>
       <NavigationDrawer />
     </div>
   </div>
-  <div class="row">
-    <div class="col col-auto">
+  <div class="tw-grid tw-grid-cols-5">
+    <div class="tw-col-span-1">
       <IconDrawer />
     </div>
-    <div class="col">
+    <div class="tw-col-span-4">
       <NavLinks />
     </div>
   </div>

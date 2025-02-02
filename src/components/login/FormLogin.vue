@@ -2,27 +2,29 @@
 <q-form @submit="login">
     <div class="flex justify-center">
         <div class="">
-            <strong class="text-blue-10">Username/Email/Number</strong>
+            <strong class="text-blue-10 tw-text-[15px]">Username/Email/Number</strong>
             <div class="q-mt-sm">
                 <q-input 
                     outlined 
                     v-model="username"
-                    style="width: 450px;" 
+                    class="tw-w-[450px]"
                     label="Enter your username, email or number"
                     :rules="[ val => val && val.length > 0 || 'Please type your username, email or number']" 
                 />
             </div>
         </div>
     </div>
-    <div class="flex justify-center q-mt-md">
+    
+    <div class="flex mt-[200px] justify-center q-mt-md">
         <div class="">
-            <strong class="text-blue-10">Password</strong>
+            <strong class="text-blue-10 tw-text-[15px]">Password</strong>
             <div class="q-mt-sm">
                 <q-input 
                     outlined 
                     v-model="password" 
                     :type="isPwd ? 'password' : 'text'" 
-                    style="width: 450px;" label="Enter your password"
+                    class="tw-w-[450px]"
+                    label="Enter your password"
                     :rules="[
                         val => val !== null && val !== '' || 'Please type your password',
                         val => val.length >= 8 || 'Password mush have 8 characters',
@@ -41,14 +43,13 @@
             </div>
         </div>
     </div>
-    <div class="flex justify-center text-blue q-my-md">
-        <span>- - - - - - - - - - - - - - - - - - - - - Forgot your password - - - - - - - - - - - - - - - - - - - - -</span>
+    <div class="flex justify-center tw-font-semibold tw-text-blue-500 q-my-md">
+        <span>- - - - - - - - - - - - - - - - Forgot your password ? - - - - - - - - - - - - - - - -</span>
     </div>
     <div class="flex justify-center">
         <q-btn 
             type="submit"
-            class="bg-indigo-14 text-white text-capitalize text-weight-bold" 
-            style="width: 450px;" 
+            class="tw-bg-blue-600 text-white tw-text-[18px] text-capitalize text-weight-bold tw-w-[450px] tw-p-3"
             label="Login" 
         >
             <q-popup-proxy v-if="error">
@@ -74,8 +75,8 @@ const router = useRouter()
 
 
 const validData = {
-    username: 'regan@gmail.com',
-    password: 'Regan123',
+    username: 'test@test.com',
+    password: 'Test1234',
     tokan: 'fake-jwt-token-12345',
 
 }

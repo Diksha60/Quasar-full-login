@@ -8,17 +8,17 @@
                 clickable 
                 v-for="link in linksList" 
                 :key="link.title" 
-                tag="a"
+                tag="router-link"
                 :to="link.link"
-                v-bind="link"
-                :active="link.title === 'Outbox'" 
+                exact-active-class="tw-bg-blue-200 tw-text-blue-600 tw-border-l-[3px] tw-border-blue-500"
                 v-ripple
+                
             >
                 <q-item-section avatar>
-                    <q-icon color="blue" :name="link.icon" />
+                    <q-icon class="tw-text-indigo-900" :name="link.icon"/>
                     </q-item-section>
                 <q-item-section class="">
-                    <strong class="text-blue">{{ link.title }}</strong>
+                    <p class="tw-text-indigo-900 tw-font-medium" >{{ link.title }}</p>
                 </q-item-section>
             </q-item>
         </q-list>
@@ -26,6 +26,10 @@
 </template>
 
 <script setup>
+import { useRoute } from 'vue-router';
+
+
+const route = useRoute();
 
 
 const linksList = [{

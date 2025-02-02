@@ -3,6 +3,7 @@
 
 import { defineConfig } from '#q-app/wrappers'
 
+
 export default defineConfig((/* ctx */) => {
   return {
     // https://v2.quasar.dev/quasar-cli-vite/prefetch-feature
@@ -16,8 +17,10 @@ export default defineConfig((/* ctx */) => {
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#css
     css: [
-      'app.scss'
+      'tailwind.css', 'app.scss',
     ],
+  
+    
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [

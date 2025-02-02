@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-px-md">
+  <q-page class="tw-px-4">
     <TopPublishPost />
     <MainSection />
   </q-page>

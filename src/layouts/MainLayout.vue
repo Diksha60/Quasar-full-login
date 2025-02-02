@@ -9,7 +9,7 @@
       <MainNavLink />
     </q-drawer>
 
-    <q-page-container>
+    <q-page-container >
       <router-view />
     </q-page-container>
   </q-layout>

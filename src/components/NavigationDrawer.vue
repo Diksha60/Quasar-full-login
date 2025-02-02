@@ -1,12 +1,12 @@
 <template>
-    <q-list class="row">
-        <q-item clickable v-ripple class="col col-auto">
+    <q-list class="tw-grid tw-grid-cols-5">
+        <q-item clickable v-ripple class="tw-col-span-1">
             <q-item-section avatar>
-                <q-icon color="blue" name="near_me" />
+                <q-icon class="tw-text-indigo-900" name="near_me" />
             </q-item-section>
         </q-item>
-        <q-item clickable v-ripple class="col">
-            <q-item-section class="text-blue">
+        <q-item clickable v-ripple class="tw-col-span-4">
+            <q-item-section class="tw-text-indigo-900 tw-text-[13px]">
                 Publish Options
             </q-item-section>
         </q-item>
