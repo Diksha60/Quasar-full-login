@@ -21,3 +21,7 @@
         />
     </div>
 </template>
+
+<script setup>
+import * as HugeIcons from 'hugeicons-vue';
+</script>

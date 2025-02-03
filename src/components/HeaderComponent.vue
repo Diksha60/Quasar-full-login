@@ -33,36 +33,40 @@
                     dropdown-icon="keyboard_arrow_down"
                 />
                 <q-avatar>
-                    <q-icon 
+                    <component :is="icons.network" class="text-red tw-h-[53px]" size="28"/>
+                    <!-- <q-icon 
                         name="signal_cellular_alt"
                         square
                         class="tw-h-[53px] text-red"
                         size="28px"
-                    />
+                    /> -->
                 </q-avatar>
                 <q-avatar>
-                    <q-icon 
+                    <component :is="icons.people" class="tw-text-blue-500 tw-h-[50px]" size="24"/>
+                    <!-- <q-icon 
                         name="group"
                         square
                         class="tw-h-[53px] tw-text-blue-900"
                         size="28px"
-                    />
+                    /> -->
                 </q-avatar>
                 <q-avatar>
-                    <q-icon 
+                    <component :is="icons.frame" class="tw-text-blue-500 tw-h-[50px]" size="24"/>
+                    <!-- <q-icon 
                         name="crop_square"
                         square
                         class="tw-h-[53px] tw-text-blue-900"
                         size="28px"
-                    />
+                    /> -->
                 </q-avatar>
                 <q-avatar>
-                    <q-icon 
+                    <component :is="icons.notification" class="tw-text-blue-500 tw-h-[50px]" size="24"/>
+                    <!-- <q-icon 
                         name="notifications"
                         square
                         class="tw-h-[53px] tw-text-blue-900"
                         size="28px"
-                    />
+                    /> -->
                 </q-avatar>
                 <q-avatar>
                     <div @click="logout">
@@ -80,6 +84,14 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import * as HugeIcons from 'hugeicons-vue';
+
+const icons = {
+    network: HugeIcons.SignalFull02Icon,
+    people: HugeIcons.UserMultiple02Icon,
+    frame: HugeIcons.DashedLine02Icon,
+    notification: HugeIcons.Notification02Icon
+}
 
 const router = useRouter()
 const select = ref(null)

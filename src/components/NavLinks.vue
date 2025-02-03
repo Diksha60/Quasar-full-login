@@ -15,8 +15,8 @@
                 
             >
                 <q-item-section avatar>
-                    <q-icon class="tw-text-indigo-900" :name="link.icon"/>
-                    </q-item-section>
+                    <component :is="link.icon" class="tw-text-indigo-900" size="23"/>
+                </q-item-section>
                 <q-item-section class="">
                     <p class="tw-text-indigo-900 tw-font-medium" >{{ link.title }}</p>
                 </q-item-section>
@@ -27,6 +27,7 @@
 
 <script setup>
 import { useRoute } from 'vue-router';
+import * as HugeIcons from 'hugeicons-vue';
 
 
 const route = useRoute();
@@ -34,23 +35,18 @@ const route = useRoute();
 
 const linksList = [{
         title: 'Publish Post',
-        icon: 'near_me',
+        icon: HugeIcons.Navigation03Icon,
         link: '/'
     },
     {
         title: 'Create Post',
-        icon: 'add_circle',
+        icon: HugeIcons.AddCircleIcon,
         link: '/createPost'
     },
     {
         title: 'Post Planner',
-        icon: 'edit_calendar',
+        icon: HugeIcons.CalendarFavorite01Icon,
         link: '/postPlanner'
-    },
-    {
-        title: 'Image',
-        icon: 'edit_calendar',
-        link: '/image'
     },
 ]
 </script>
